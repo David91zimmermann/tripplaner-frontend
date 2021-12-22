@@ -3,10 +3,10 @@
     <div class="col" v-for="user in users" :key="user.id">
       <div class="card h-100">
         <div class="card-body">
-          <h5 class="card-title">{{ user.firstName }} {{ user.lastName }}</h5>
+          <h5 class="card-title">{{ user.username }}</h5>
           <p class="card-text">
-            {{ user.firstName }} {{ user.lastName }} ist {{ user.username }} und
-            hat das password {{ user.password }}.
+            Vorname: {{ user.firstName }} Nachame: {{ user.lastName }} Nutzername: {{ user.username }}
+            Passwort: {{ user.password }}
           </p>
         </div>
       </div>
