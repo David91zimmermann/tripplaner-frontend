@@ -1,6 +1,5 @@
 import { createRouter, createWebHistory } from 'vue-router'
 import Home from '../views/Home.vue'
-import User from '../views/User.vue'
 
 const routes = [
   {
@@ -9,14 +8,34 @@ const routes = [
     component: Home
   },
   {
-    path: '/about',
-    name: 'About',
-    component: () => import(/* webpackChunkName: "about" */ '../views/About.vue')
+    path: '/reiseziele',
+    name: 'Reiseziele',
+    component: () => import(/* webpackChunkName: "reiseziele" */ '../views/Reiseziele.vue')
   },
   {
-    path: '/user',
-    name: 'User',
-    component: User
+    path: '/kalender',
+    name: 'Kalender',
+    component: () => import(/* webpackChunkName: "kalender" */ '../views/Kalender.vue')
+  },
+  {
+    path: '/abstimmungen',
+    name: 'Abstimmungen',
+    component: () => import(/* webpackChunkName: "abstimmungen" */ '../views/Abstimmungen.vue')
+  },
+  {
+    path: '/todo',
+    name: 'ToDo',
+    component: () => import(/* webpackChunkName: "todo" */ '../views/ToDo.vue')
+  },
+  {
+    path: '/kosten',
+    name: 'Kosten',
+    component: () => import(/* webpackChunkName: "kosten" */ '../views/Kosten.vue')
+  },
+  {
+    path: '/ticketsuche',
+    name: 'Ticketsuche',
+    component: () => import(/* webpackChunkName: "ticketsuche" */ '../views/Ticketsuche.vue')
   }
 ]
 

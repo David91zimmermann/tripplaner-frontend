@@ -26,10 +26,12 @@ export default {
     </h1>
 
     <SidebarLink to="/" icon="fas fa-home">Home</SidebarLink>
-    <SidebarLink to="/Dashboard" icon="fas fa-columns">Dashboard</SidebarLink>
-    <SidebarLink to="/analytics" icon="fas fa-chart-bar">Analytics</SidebarLink>
-    <SidebarLink to="/friends" icon="fas fa-users">Friends</SidebarLink>
-    <SidebarLink to="/image" icon="fas fa-image">Images</SidebarLink>
+    <SidebarLink to="/reiseziele" icon="fas fa-map-marked-alt">Reiseziele</SidebarLink>
+    <SidebarLink to="/kalender" icon="fas fa-calendar-alt">Kalender</SidebarLink>
+    <SidebarLink to="/abstimmungen" icon="fas fa-person-booth">Abstimmungen</SidebarLink>
+    <SidebarLink to="/todo" icon="fas fa-tasks">ToDo</SidebarLink>
+    <SidebarLink to="/kosten" icon="fas fa-euro-sign">Kosten</SidebarLink>
+    <SidebarLink to="/ticketsuche" icon="fas fa-plane-departure">Ticketsuche</SidebarLink>
 
     <span
       class="collapse-icon"
@@ -43,9 +45,9 @@ export default {
 
 <style>
 :root {
-  --sidebar-bg-color: #2f855a;
-  --sidebar-item-hover: #38a169;
-  --sidebar-item-active: #276749;
+  --sidebar-bg-color: #3b3d3d;
+  --sidebar-item-hover: #030303;
+  --sidebar-item-active: #0a0a0a;
 }
 </style>
 
@@ -61,6 +63,7 @@ export default {
   left: 0;
   bottom: 0;
   padding: 0.5em;
+  opacity: 90%;
 
   transition: 0.3s ease;
 
