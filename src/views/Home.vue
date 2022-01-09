@@ -32,7 +32,7 @@ export default {
       }
       fetch(endpoint, requestOptions)
         .then(response => response.json())
-        .then(user => this.trips.push(user))
+        .then(trip => this.trips.push(trip))
         .catch(error => console.log('error', error))
     }
   },
