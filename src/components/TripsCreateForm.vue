@@ -1,40 +1,40 @@
 <template>
-  <button class="btn btn-success sticky-button" data-bs-toggle="offcanvas" data-bs-target="#users-create-offcanvas" aria-controls="#users-create-offcanvas">
-    <i class="fas fa-plus-circle"></i>
+  <button class="btn btn-outline-secondary sticky-xxl-top" data-bs-toggle="offcanvas" data-bs-target="#trips-create-offcanvas" aria-controls="#trips-create-offcanvas">
+    <i class="fas fa-plus-circle"> Neue Reise erstellen</i>
   </button>
-  <div class="offcanvas offcanvas-end" tabindex="-1" id="users-create-offcanvas" aria-labelledby="offcanvas-label">
+  <div class="offcanvas offcanvas-end" tabindex="-1" id="trips-create-offcanvas" aria-labelledby="offcanvas-label">
     <div class="offcanvas-header">
-      <h5 id="offcanvas-label">New User</h5>
+      <h5 id="offcanvas-label">Neue Reise</h5>
       <button type="button" id="close-offcanvas" class="btn-close text-reset" data-bs-dismiss="offcanvas" aria-label="Close"></button>
     </div>
     <div class="offcanvas-body">
-      <form class="text-start needs-validation" id="users-create-form" novalidate>
+      <form class="text-start needs-validation" id="trips-create-form" novalidate>
         <div class="mb-3">
-          <label for="first-name" class="form-label">First name</label>
-          <input type="text" class="form-control" id="first-name" v-model="firstName" required>
+          <label for="urlaubsname" class="form-label">Geben Sie Ihrer Reise einen Namen</label>
+          <input type="text" class="form-control" id="urlaubsname" v-model="urlaubsname" required>
           <div class="invalid-feedback">
-            Please provide the first name.
+            Bitte geben Sie Ihrer Reise einen Namen (Bsp. Florida 2023).
           </div>
         </div>
         <div class="mb-3">
-          <label for="last-name" class="form-label">Last name</label>
-          <input type="text" class="form-control" id="last-name" v-model="lastName" required>
+          <label for="reiseort" class="form-label">Ort (Wohin geht Ihre Reise?)</label>
+          <input type="text" class="form-control" id="reiseort" v-model="reiseort" required>
           <div class="invalid-feedback">
-            Please provide the last name.
+            Geben Sie den Ort Ihrer Reise an.
           </div>
         </div>
         <div class="mb-3">
-          <label for="username" class="form-label">Username</label>
-          <input type="text" class="form-control" id="username" v-model="username" required>
+          <label for="reisestart" class="form-label">Reise beginnt am:</label>
+          <input type="text" class="form-control" id="reisestart" v-model="reisestart" required>
           <div class="invalid-feedback">
-            Please provide a username.
+            Geben Sie das Datum im Format (dd.mm.jjjj) an.
           </div>
         </div>
         <div class="mb-3">
-          <label for="password" class="form-label">Password</label>
-          <input type="text" class="form-control" id="password" v-model="password" required>
+          <label for="reiseende" class="form-label">endet am:</label>
+          <input type="text" class="form-control" id="reiseende" v-model="reiseende" required>
           <div class="invalid-feedback">
-            Please provide a username.
+            Geben Sie das Datum im Format (dd.mm.jjjj) an.
           </div>
         </div>
         <div v-if="this.serverValidationMessages">
@@ -45,8 +45,8 @@
           </ul>
         </div>
         <div class="mt-5">
-          <button class="btn btn-primary me-3" type="submit" @click.prevent="createUser">Create</button>
-          <button class="btn btn-danger" type="reset">Reset</button>
+          <button class="btn btn-primary me-3" type="submit" @click.prevent="createTrip">Erstellen</button>
+          <button class="btn btn-danger" type="reset">Zurücksetzen</button>
         </div>
       </form>
     </div>
@@ -58,10 +58,10 @@ export default {
   name: 'TripsCreateForm',
   data () {
     return {
-      username: '',
-      password: '',
-      firstName: '',
-      lastName: '',
+      urlaubsname: '',
+      reiseort: '',
+      reisestart: '',
+      reiseende: '',
       serverValidationMessages: []
     }
   },
@@ -73,10 +73,10 @@ export default {
         const headers = new Headers()
         headers.append('Content-Type', 'application/json')
         const trip = JSON.stringify({
-          username: this.username,
-          password: this.password,
-          firstName: this.firstName,
-          lastName: this.lastName
+          urlaubsname: this.urlaubsname,
+          reiseort: this.reiseort,
+          reisestart: this.reisestart,
+          reiseende: this.reiseende
         })
         const requestOptions = {
           method: 'POST',
@@ -111,11 +111,12 @@ export default {
 </script>
 
 <style scoped>
-.sticky-button {
+.sticky-xxl-top {
   position: fixed;
-  bottom: 20px;
-  right: 20px;
-  padding: 10px 15px;
+  top: 20%;
+  bottom: 75%;
+  left: 30%;
+  padding: 5px 50px 5px 10px;
   border-radius: 30px;
 }
 </style>

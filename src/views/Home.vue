@@ -1,7 +1,7 @@
 <template>
   <Navbar>Navbar</Navbar>
   <div class="container-fluid">
-    <trips-list :users="this.trips"></trips-list>
+    <trips-list :trips="this.trips"></trips-list>
   </div>
   <trips-create-form @created="addTrip"></trips-create-form>
 </template>
