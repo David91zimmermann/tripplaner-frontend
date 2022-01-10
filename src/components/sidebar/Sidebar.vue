@@ -54,7 +54,7 @@ export default {
 <style scoped>
 .sidebar {
   color: white;
-  background-color: var(--sidebar-bg-color);
+  background-color: #3b3d3d;
 
   float: left;
   position: fixed;
