@@ -33,15 +33,14 @@ const routes = [
     component: () => import(/* webpackChunkName: "kosten" */ '../views/Kosten.vue')
   },
   {
-    path: '/ticketsuche',
-    name: 'Ticketsuche',
-    component: () => import(/* webpackChunkName: "ticketsuche" */ '../views/Ticketsuche.vue')
+    path: '/user',
+    name: 'User',
+    component: () => import(/* webpackChunkName: "ticketsuche" */ '../views/User.vue')
   }
 ]
 
 const router = createRouter({
   history: createWebHistory(process.env.BASE_URL),
-  linkActiveClass: 'active',
   routes
 })
 

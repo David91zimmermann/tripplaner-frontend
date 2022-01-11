@@ -1,6 +1,6 @@
 <template>
   <div class="row row-cols-1 row-cols-md-4 g-4">
-    <div class="col" v-for="trip in trips" :key="trip.id">
+    <div class="col" v-for="trip in trips" :key="trip.tid">
       <div class="card h-100">
         <div class="card-body">
           <h5 class="card-title">{{ trip.urlaubsname }}</h5>

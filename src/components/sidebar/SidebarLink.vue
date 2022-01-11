@@ -1,7 +1,3 @@
-<head>
-<script defer src="/src/assets/js/all.js"></script>
-</head>
-
 <script>
 import { computed } from 'vue'
 import { useRoute } from 'vue-router'

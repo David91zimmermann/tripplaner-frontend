@@ -1,7 +1,3 @@
-<head>
-<script defer src="/src/assets/js/all.js"></script>
-</head>
-
 <script>
 import { collapsed, toggleSidebar, sidebarWidth } from '@/components/sidebar/state'
 import SidebarLink from '@/components/sidebar/SidebarLink'
@@ -31,7 +27,7 @@ export default {
     <SidebarLink to="/abstimmungen" icon="fas fa-person-booth">Abstimmungen</SidebarLink>
     <SidebarLink to="/todo" icon="fas fa-tasks">ToDo</SidebarLink>
     <SidebarLink to="/kosten" icon="fas fa-euro-sign">Kosten</SidebarLink>
-    <SidebarLink to="/ticketsuche" icon="fas fa-plane-departure">Ticketsuche</SidebarLink>
+    <SidebarLink to="/user" icon="fas fa-plane-departure">Ticketsuche</SidebarLink>
 
     <span
       class="collapse-icon"

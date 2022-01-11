@@ -1,4 +1,5 @@
 <template>
+  <router-view></router-view>
   <Navbar>Navbar</Navbar>
   <div class="container-fluid">
     <trips-list :trips="this.trips"></trips-list>
