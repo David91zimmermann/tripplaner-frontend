@@ -25,14 +25,14 @@
         </div>
         <div class="mb-3">
           <label for="reisestart" class="form-label">Reise beginnt am:</label>
-          <input type="text" class="form-control" id="reisestart" v-model="reisestart" required>
+          <input type="text" class="form-control" id="reisestart" v-model="tripbegin" required>
           <div class="invalid-feedback">
             Geben Sie das Datum im Format (dd.mm.jjjj) an.
           </div>
         </div>
         <div class="mb-3">
           <label for="reiseende" class="form-label">endet am:</label>
-          <input type="text" class="form-control" id="reiseende" v-model="reiseende" required>
+          <input type="text" class="form-control" id="reiseende" v-model="tripend" required>
           <div class="invalid-feedback">
             Geben Sie das Datum im Format (dd.mm.jjjj) an.
           </div>
@@ -60,8 +60,11 @@ export default {
     return {
       urlaubsname: '',
       reiseort: '',
-      reisestart: '',
-      reiseende: '',
+      tripbegin: '',
+      tripend: '',
+      ersteller: '',
+      begleiter: '',
+      anfragende: '',
       serverValidationMessages: []
     }
   },
@@ -75,8 +78,11 @@ export default {
         const trip = JSON.stringify({
           urlaubsname: this.urlaubsname,
           reiseort: this.reiseort,
-          reisestart: this.reisestart,
-          reiseende: this.reiseende
+          tripbegin: this.tripbegin,
+          tripend: this.tripend,
+          ersteller: this.ersteller,
+          begleiter: this.begleiter,
+          anfragende: this.anfragende
         })
         const requestOptions = {
           method: 'POST',

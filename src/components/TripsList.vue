@@ -5,7 +5,7 @@
         <div class="card-body">
           <h5 class="card-title">{{ trip.urlaubsname }}</h5>
           <p class="card-text">
-            Reiseziel: {{ trip.reiseort }} Reisebegin: {{ trip.reisestart }} Reiseende: {{ trip.reiseende }}
+            Reiseziel: {{ trip.reiseort }} Reisebegin: {{ trip.tripbegin }} Reiseende: {{ trip.tripend }}
           </p>
         </div>
       </div>
