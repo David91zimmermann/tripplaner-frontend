@@ -1,4 +1,5 @@
 <template>
+  <Navbar>Navbar</Navbar>
   <h1>Welcome to User</h1>
   <div class="container-fluid">
     <users-card-list :users="this.users"></users-card-list>
@@ -9,10 +10,12 @@
 <script>
 import UsersCardList from '@/components/UsersCardList'
 import UsersCreateForm from '@/components/UsersCreateForm'
+import Navbar from '@/components/Navbar'
 
 export default {
   name: 'Users',
   components: {
+    Navbar,
     UsersCardList,
     UsersCreateForm
   },
