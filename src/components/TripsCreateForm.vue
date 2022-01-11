@@ -62,9 +62,6 @@ export default {
       reiseort: '',
       tripbegin: '',
       tripend: '',
-      ersteller: '',
-      begleiter: '',
-      anfragende: '',
       serverValidationMessages: []
     }
   },
@@ -79,10 +76,7 @@ export default {
           urlaubsname: this.urlaubsname,
           reiseort: this.reiseort,
           tripbegin: this.tripbegin,
-          tripend: this.tripend,
-          ersteller: this.ersteller,
-          begleiter: this.begleiter,
-          anfragende: this.anfragende
+          tripend: this.tripend
         })
         const requestOptions = {
           method: 'POST',
