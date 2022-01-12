@@ -1,9 +1,9 @@
 <template>
   <Navbar>Navbar</Navbar>
-  <div class="container-fluid">
-    <trips-list :trips="this.trips"></trips-list>
-  </div>
-  <trips-create-form @created="addTrip"></trips-create-form>
+    <div class="container-fluid position-absolute bottom-0 top-0" :style=" { background: ' #7B7B7BFF'}">
+      <trips-list :trips="this.trips"></trips-list>
+    </div>
+    <trips-create-form @created="addTrip"></trips-create-form>
 </template>
 
 <script>
@@ -20,7 +20,22 @@ export default {
   },
   data () {
     return {
-      trips: []
+      trips: [
+        {
+          id: 1,
+          urlaubsname: 'Florida 2023',
+          reiseort: 'Orlando',
+          tripbegin: '01.04.2023',
+          tripend: '14.04.2023'
+        },
+        {
+          id: 1,
+          urlaubsname: 'One Piece',
+          reiseort: 'Laugh Tale',
+          tripbegin: '01.01.2024',
+          tripend: '31.12.2024'
+        }
+      ]
     }
   },
   methods: {
@@ -53,4 +68,8 @@ export default {
 </script>
 
 <style scoped>
+.container-fluid {
+  margin-top: 56px;
+  right: 0;
+}
 </style>

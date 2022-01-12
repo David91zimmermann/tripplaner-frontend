@@ -1,5 +1,5 @@
 <template>
-  <button class="btn btn-outline-secondary sticky-xxl-top" data-bs-toggle="offcanvas" data-bs-target="#trips-create-offcanvas" aria-controls="#trips-create-offcanvas">
+  <button class="btn btn-outline-info sticky-xxl-top" data-bs-toggle="offcanvas" data-bs-target="#trips-create-offcanvas" aria-controls="#trips-create-offcanvas">
     <i class="fas fa-plus-circle"> Neue Reise erstellen</i>
   </button>
   <div class="offcanvas offcanvas-end" tabindex="-1" id="trips-create-offcanvas" aria-labelledby="offcanvas-label">
@@ -24,8 +24,8 @@
           </div>
         </div>
         <div class="mb-3">
-          <label for="reisestart" class="form-label">Reise beginnt am:</label>
-          <input type="text" class="form-control" id="reisestart" v-model="tripbegin" required>
+          <label for="reisestart_picker" class="form-label">Reise beginnt am:</label>
+          <input type="text" class="form-control" id="reisestart_picker" v-model="tripbegin" required>
           <div class="invalid-feedback">
             Geben Sie das Datum im Format (dd.mm.jjjj) an.
           </div>

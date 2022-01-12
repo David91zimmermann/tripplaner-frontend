@@ -1,12 +1,19 @@
 <template>
-  <div class="row row-cols-1 row-cols-md-4 g-4">
+  <div class="row row-cols-1 g-2">
     <div class="col" v-for="trip in trips" :key="trip.id">
-      <div class="card h-100">
+      <div class="card w-50 text-center translate-middle">
+        <h5 class="card-header">{{ trip.urlaubsname }}</h5>
         <div class="card-body">
-          <h5 class="card-title">{{ trip.urlaubsname }}</h5>
-          <p class="card-text">
-            Reiseziel: {{ trip.reiseort }} Reisebegin: {{ trip.tripbegin }} Reiseende: {{ trip.tripend }}
-          </p>
+          <h5 class="card-title">Countdown</h5>
+        </div>
+        <div class="card-footer text-muted">
+          <div class="reiseort">
+            Reiseort: {{ trip.reiseort }}
+          </div>
+          <div class="reisedauer">
+            von: {{ trip.tripbegin }} - bis: {{ trip.tripend }}
+          </div>
+          <a href="#" class="btn btn-outline-info btn-sm position-absolute bottom-0 end-0">Beitreten</a>
         </div>
       </div>
     </div>
@@ -26,4 +33,9 @@ export default {
 </script>
 
 <style scoped>
+.card {
+  background-color: #ecffd2;
+  left: 54%;
+  top: 140%;
+}
 </style>

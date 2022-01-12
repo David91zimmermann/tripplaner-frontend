@@ -10,10 +10,15 @@ export default {
 }
 </script>
 <template>
+  <div
+    id="app"
+    :class="{'dark': darkMode}"
+  >
   <div>
   <Sidebar />
   <div :style="{ 'margin-left' : sidebarWidth }">
     <router-view/>
+  </div>
   </div>
   </div>
 </template>
